@@ -17,16 +17,13 @@ Pod::Spec.new do |spec|
   spec.swift_version              = "5.0"
   spec.ios.deployment_target      = "10.0"
   spec.source       = { :git => "https://github.com/tenomad-company/react-native-zoom-sdk-custom.git", :tag => "master" }
-
-  # spec.libraries = "z", "c++", "sqlite3"
-  # spec.frameworks = "Foundation", "UIKit", "VideoToolbox", "CoreBluetooth", "ReplayKit", "CoreMotion"
-
   spec.default_subspec = 'Core'
   spec.requires_arc = true
+  spec.pod_target_xcconfig = { "INFOPLIST_FILE" => "$(PODS_TARGET_SRCROOT)/**/Info.plist" }
 
   spec.subspec 'Core' do |subspec|
-    subspec.ios.source_files           = "MobileRTC.xcframework/ios-armv7_arm64/Headers/**/*.{h,m}"
-    subspec.ios.public_header_files    = "MobileRTC.xcframework/ios-armv7_arm64/Headers/**/*.{h,m}"
+    subspec.ios.source_files           = "MobileRTC.xcframework/**/Headers/**/*.{h,m}"
+    subspec.ios.public_header_files    = "MobileRTC.xcframework/**/Headers/**/*.{h,m}"
     subspec.ios.vendored_frameworks    = "MobileRTC.xcframework"
     subspec.ios.resource = "MobileRTCResources.bundle"
   end
