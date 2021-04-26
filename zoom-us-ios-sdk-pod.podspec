@@ -21,8 +21,8 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
 
   spec.subspec 'Core' do |subspec|
-    subspec.ios.source_files           = "MobileRTC.xcframework/**/Headers/**/*.{h,m}"
-    subspec.ios.public_header_files    = "MobileRTC.xcframework/**/Headers/**/*.{h,m}"
+    subspec.ios.source_files           = "MobileRTC.xcframework/ios-armv7_arm64/MobileRTC.framework/Headers/**/*.{h,m}"
+    subspec.ios.public_header_files    = "MobileRTC.xcframework/ios-armv7_arm64/MobileRTC.framework/Headers/**/*.{h,m}"
     subspec.ios.vendored_frameworks    = "MobileRTC.xcframework"
     subspec.ios.resource = "MobileRTCResources.bundle"
   end
