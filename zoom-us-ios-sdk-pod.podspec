@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "ZoomSDK"
-  spec.version      = "5.4.54802.0124"
+  spec.version      = "5.5.12509.0401"
   spec.summary      = "Original framework for Zoom.us iOS SDK for ARM. Not for simulator"
   spec.homepage     = "https://github.com/zoom/zoom-sdk-ios"
   spec.license      = "MIT"
@@ -25,9 +25,9 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
 
   spec.subspec 'Core' do |subspec|
-    subspec.ios.source_files           = "MobileRTC.framework/Headers/**/*.{h,m}"
-    subspec.ios.public_header_files    = "MobileRTC.framework/Headers/**/*.{h,m}"
-    subspec.ios.vendored_frameworks    = "MobileRTC.framework"
+    subspec.ios.source_files           = "MobileRTC.xcframework/ios-armv7_arm64/Headers/**/*.{h,m}"
+    subspec.ios.public_header_files    = "MobileRTC.xcframework/ios-armv7_arm64/Headers/**/*.{h,m}"
+    subspec.ios.vendored_frameworks    = "MobileRTC.xcframework"
     subspec.ios.resource = "MobileRTCResources.bundle"
   end
 
